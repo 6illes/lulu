@@ -1,0 +1,5 @@
+#!/bin/bash
+brightness=`cat /sys/class/leds/chromeos\:\:kbd_backlight/brightness`
+file=/sys/class/leds/chromeos\:\:kbd_backlight/brightness
+let "brightness+=2"
+echo $brightness > $file

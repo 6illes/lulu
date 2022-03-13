@@ -1,0 +1,5 @@
+#!/bin/bash
+brightness=`cat /sys/class/backlight/intel_backlight/brightness`
+file=/sys/class/backlight/intel_backlight/brightness
+let "brightness+=10"
+echo $brightness > $file
