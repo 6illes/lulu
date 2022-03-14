@@ -20,3 +20,8 @@ sudo kblight-    for Ctrl+F6
 amixer sset Master toggle      for F8\
 amixer sset Master 5%-         for F9\
 amixer sset Master 5%+         for F10\
+
+Screen flickering after boot ?
+
+Edit /etc/default/grub\
+Add kernel parameters  "i915.fastboot=1 acpi_backlight=vendor"
