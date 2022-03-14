@@ -5,9 +5,9 @@ Copy xblight files to /usr/local/bin
 
 Modify /etc/sudoers.d/backlight NOPASSWD
 
-ALL ALL = (root:root) NOPASSWD: /usr/local/bin/dblight-
-ALL ALL = (root:root) NOPASSWD: /usr/local/bin/dblight+
-ALL ALL = (root:root) NOPASSWD: /usr/local/bin/kblight-
+ALL ALL = (root:root) NOPASSWD: /usr/local/bin/dblight-\
+ALL ALL = (root:root) NOPASSWD: /usr/local/bin/dblight+\
+ALL ALL = (root:root) NOPASSWD: /usr/local/bin/kblight-\
 ALL ALL = (root:root) NOPASSWD: /usr/local/bin/kblight+
 
 Then open  Settings / Keyboard / Shortcuts
