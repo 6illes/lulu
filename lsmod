@@ -1,0 +1,134 @@
+Module                  Size  Used by
+ctr                    16384  3
+ccm                    20480  9
+cmac                   16384  0
+algif_hash             16384  0
+algif_skcipher         16384  0
+af_alg                 32768  2 algif_hash,algif_skcipher
+bnep                   28672  0
+btusb                  65536  0
+btrtl                  24576  1 btusb
+btbcm                  20480  1 btusb
+btintel                32768  1 btusb
+intel_rapl_msr         20480  0
+intel_rapl_common      28672  1 intel_rapl_msr
+bluetooth             737280  6 btrtl,btintel,btbcm,bnep,btusb
+x86_pkg_temp_thermal    20480  0
+intel_powerclamp       20480  0
+coretemp               20480  0
+jitterentropy_rng      16384  1
+kvm_intel             327680  0
+drbg                   40960  1
+kvm                   921600  1 kvm_intel
+irqbypass              16384  1 kvm
+aes_generic            36864  0
+ghash_clmulni_intel    16384  0
+snd_hda_codec_realtek   155648  1
+snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
+iwlmvm                339968  0
+ledtrig_audio          16384  1 snd_hda_codec_generic
+snd_hda_codec_hdmi     73728  1
+snd_hda_intel          57344  4
+snd_intel_dspcfg       28672  1 snd_hda_intel
+soundwire_intel        45056  1 snd_intel_dspcfg
+soundwire_generic_allocation    16384  1 soundwire_intel
+snd_soc_core          315392  1 soundwire_intel
+mac80211              983040  1 iwlmvm
+uvcvideo              114688  0
+snd_compress           32768  1 snd_soc_core
+videobuf2_vmalloc      20480  1 uvcvideo
+soundwire_cadence      36864  1 soundwire_intel
+videobuf2_memops       20480  1 videobuf2_vmalloc
+videobuf2_v4l2         36864  1 uvcvideo
+snd_hda_codec         172032  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+libarc4                16384  1 mac80211
+videobuf2_common       65536  2 videobuf2_v4l2,uvcvideo
+snd_hda_core          110592  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+rapl                   20480  0
+aesni_intel           368640  6
+iwlwifi               294912  1 iwlmvm
+snd_hwdep              16384  1 snd_hda_codec
+intel_cstate           20480  0
+soundwire_bus          90112  3 soundwire_intel,soundwire_generic_allocation,soundwire_cadence
+chromeos_laptop        20480  0
+crypto_simd            16384  1 aesni_intel
+videodev              286720  3 videobuf2_v4l2,uvcvideo,videobuf2_common
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+tpm_infineon           20480  0
+snd_pcm               135168  7 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,soundwire_intel,snd_compress,snd_soc_core,snd_hda_core
+glue_helper            16384  1 aesni_intel
+intel_uncore          176128  0
+cfg80211              970752  3 iwlmvm,iwlwifi,mac80211
+sg                     36864  0
+ansi_cprng             16384  0
+snd_timer              49152  1 snd_pcm
+tpm_tis                16384  0
+serio_raw              20480  0
+tpm_tis_core           28672  1 tpm_tis
+ecdh_generic           16384  1 bluetooth
+pcspkr                 16384  0
+mc                     61440  4 videodev,videobuf2_v4l2,uvcvideo,videobuf2_common
+iTCO_wdt               16384  0
+joydev                 28672  0
+rfkill                 28672  5 bluetooth,cfg80211
+snd                   110592  18 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_compress,snd_soc_core,snd_pcm
+intel_pmc_bxt          16384  1 iTCO_wdt
+iTCO_vendor_support    16384  1 iTCO_wdt
+intel_pch_thermal      16384  0
+ecc                    36864  1 ecdh_generic
+watchdog               28672  1 iTCO_wdt
+tpm                    73728  3 tpm_tis,tpm_infineon,tpm_tis_core
+soundcore              16384  1 snd
+libaes                 16384  3 bluetooth,aesni_intel,aes_generic
+ac                     16384  0
+rng_core               16384  1 tpm
+evdev                  28672  10
+atmel_mxt_ts           45056  0
+cyapatp                73728  0
+elan_i2c               53248  0
+crc_itu_t              16384  1 cyapatp
+chromeos_pstore        16384  0
+cros_kbd_led_backlight    16384  0
+fuse                  167936  3
+configfs               57344  1
+ip_tables              32768  0
+x_tables               53248  1 ip_tables
+autofs4                53248  2
+ext4                  921600  1
+crc16                  16384  2 bluetooth,ext4
+mbcache                16384  1 ext4
+jbd2                  151552  1 ext4
+crc32c_generic         16384  0
+sd_mod                 61440  3
+t10_pi                 16384  1 sd_mod
+crc_t10dif             20480  1 t10_pi
+crct10dif_generic      16384  0
+i915                 2715648  11
+ahci                   40960  2
+video                  53248  1 i915
+i2c_algo_bit           16384  1 i915
+libahci                45056  1 ahci
+xhci_pci               20480  0
+drm_kms_helper        278528  1 i915
+libata                290816  2 libahci,ahci
+xhci_hcd              303104  1 xhci_pci
+hid_rmi                24576  0
+rmi_core               86016  1 hid_rmi
+hid_generic            16384  0
+cec                    61440  2 drm_kms_helper,i915
+crct10dif_pclmul       16384  1
+crct10dif_common       16384  3 crct10dif_generic,crc_t10dif,crct10dif_pclmul
+drm                   618496  7 drm_kms_helper,i915
+usbcore               323584  4 xhci_hcd,uvcvideo,btusb,xhci_pci
+crc32_pclmul           16384  0
+crc32c_intel           24576  2
+scsi_mod              262144  3 sd_mod,libata,sg
+dw_dmac                16384  0
+dw_dmac_core           36864  1 dw_dmac
+i2c_hid                32768  0
+hid                   147456  3 i2c_hid,hid_generic,hid_rmi
+usb_common             16384  3 xhci_hcd,usbcore,uvcvideo
+lpc_ich                28672  0
+fan                    20480  0
+battery                20480  0
+button                 24576  0

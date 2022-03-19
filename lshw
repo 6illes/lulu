@@ -1,0 +1,309 @@
+debian
+    description: Ordinateur de Bureau
+    produit: Lulu
+    fabriquant: GOOGLE
+    version: Pilot
+    numéro de série: 123456789
+    bits: 64 bits
+    fonctionnalités: smbios-2.7 dmi-2.7 smp vsyscall32
+    configuration: boot=normal chassis=desktop family=Google_Lulu
+  *-core
+       description: Motherboard
+       identifiant matériel: 0
+     *-firmware
+          description: BIOS
+          fabriquant: coreboot
+          identifiant matériel: 0
+          date: 03/28/2016
+          taille: 1MiB
+          capacité: 8MiB
+          fonctionnalités: pci pcmcia upgrade bootselect acpi
+     *-cpu:0 DÉSACTIVÉ
+          description: CPU [vide]
+          fabriquant: GenuineIntel
+          identifiant matériel: 3
+          version: Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz
+          configuration: cores=16
+     *-memory
+          description: Mémoire système
+          identifiant matériel: 1
+          taille: 8GiB
+        *-bank:0
+             description: SODIMM DDR3 Synchrone 1600 MHz (0,6 ns)
+             produit: M471B5174QM0-YK0
+             fabriquant: Samsung
+             identifiant matériel: 0
+             numéro de série: None
+             emplacement: Channel-0-DIMM-0
+             taille: 4GiB
+             bits: 64 bits
+             horloge: 1600MHz (0.6ns)
+        *-bank:1
+             description: SODIMM DDR3 Synchrone 1600 MHz (0,6 ns)
+             produit: M471B5174QM0-YK0
+             fabriquant: Samsung
+             identifiant matériel: 1
+             numéro de série: None
+             emplacement: Channel-1-DIMM-0
+             taille: 4GiB
+             bits: 64 bits
+             horloge: 1600MHz (0.6ns)
+     *-cpu:1
+          produit: Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz
+          fabriquant: Intel Corp.
+          identifiant matériel: 2
+          information bus: cpu@0
+          taille: 1946MHz
+          capacité: 2GHz
+          bits: 64 bits
+          fonctionnalités: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts md_clear flush_l1d cpufreq
+     *-pci
+          description: Host bridge
+          produit: Broadwell-U Host Bridge -OPI
+          fabriquant: Intel Corporation
+          identifiant matériel: 100
+          information bus: pci@0000:00:00.0
+          version: 09
+          bits: 32 bits
+          horloge: 33MHz
+          configuration: driver=bdw_uncore
+          ressources: irq:0
+        *-display
+             description: VGA compatible controller
+             produit: HD Graphics 5500
+             fabriquant: Intel Corporation
+             identifiant matériel: 2
+             information bus: pci@0000:00:02.0
+             version: 09
+             bits: 64 bits
+             horloge: 33MHz
+             fonctionnalités: msi pm vga_controller bus_master cap_list rom
+             configuration: driver=i915 latency=0
+             ressources: irq:48 mémoire:e0000000-e0ffffff mémoire:d0000000-dfffffff portE/S:1800(taille=64) mémoire:c0000-dffff
+        *-multimedia:0
+             description: Audio device
+             produit: Broadwell-U Audio Controller
+             fabriquant: Intel Corporation
+             identifiant matériel: 3
+             information bus: pci@0000:00:03.0
+             version: 09
+             bits: 64 bits
+             horloge: 33MHz
+             fonctionnalités: pm msi pciexpress bus_master cap_list
+             configuration: driver=snd_hda_intel latency=0
+             ressources: irq:50 mémoire:e1118000-e111bfff
+        *-usb
+             description: USB controller
+             produit: Wildcat Point-LP USB xHCI Controller
+             fabriquant: Intel Corporation
+             identifiant matériel: 14
+             information bus: pci@0000:00:14.0
+             version: 03
+             bits: 64 bits
+             horloge: 33MHz
+             fonctionnalités: pm msi xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             ressources: irq:41 mémoire:e1100000-e110ffff
+           *-usbhost:0
+                produit: xHCI Host Controller
+                fabriquant: Linux 5.10.0-12-amd64 xhci-hcd
+                identifiant matériel: 0
+                information bus: usb@1
+                nom logique: usb1
+                version: 5.10
+                fonctionnalités: usb-2.00
+                configuration: driver=hub slots=11 speed=480Mbit/s
+              *-usb:0
+                   description: Vidéo
+                   produit: Integrated_Webcam_HD
+                   fabriquant: SuYin
+                   identifiant matériel: 3
+                   information bus: usb@1:3
+                   version: 40.07
+                   fonctionnalités: usb-2.00
+                   configuration: driver=uvcvideo maxpower=500mA speed=480Mbit/s
+              *-usb:1
+                   description: Interface sans fil Bluetooth
+                   produit: Bluetooth wireless interface
+                   fabriquant: Intel Corp.
+                   identifiant matériel: 4
+                   information bus: usb@1:4
+                   version: 0.01
+                   fonctionnalités: bluetooth usb-2.00
+                   configuration: driver=btusb maxpower=100mA speed=12Mbit/s
+           *-usbhost:1
+                produit: xHCI Host Controller
+                fabriquant: Linux 5.10.0-12-amd64 xhci-hcd
+                identifiant matériel: 1
+                information bus: usb@2
+                nom logique: usb2
+                version: 5.10
+                fonctionnalités: usb-3.00
+                configuration: driver=hub slots=4 speed=5000Mbit/s
+        *-multimedia:1
+             description: Audio device
+             produit: Wildcat Point-LP High Definition Audio Controller
+             fabriquant: Intel Corporation
+             identifiant matériel: 1b
+             information bus: pci@0000:00:1b.0
+             version: 03
+             bits: 64 bits
+             horloge: 33MHz
+             fonctionnalités: pm msi pciexpress bus_master cap_list
+             configuration: driver=snd_hda_intel latency=0
+             ressources: irq:51 mémoire:e111c000-e111ffff
+        *-pci
+             description: PCI bridge
+             produit: Wildcat Point-LP PCI Express Root Port #1
+             fabriquant: Intel Corporation
+             identifiant matériel: 1c
+             information bus: pci@0000:00:1c.0
+             version: e3
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             ressources: irq:40 mémoire:e1000000-e10fffff
+           *-network
+                description: Interface réseau sans fil
+                produit: Wireless 7260
+                fabriquant: Intel Corporation
+                identifiant matériel: 0
+                information bus: pci@0000:01:00.0
+                nom logique: wlp1s0
+                version: bb
+                numéro de série: 90:2e:1c:71:1d:62
+                bits: 64 bits
+                horloge: 33MHz
+                fonctionnalités: pm msi pciexpress bus_master cap_list ethernet physical wireless
+                configuration: broadcast=yes driver=iwlwifi driverversion=5.10.0-12-amd64 firmware=17.3216344376.0 7260-17.ucode ip=192.168.1.144 latency=0 link=yes multicast=yes wireless=IEEE 802.11
+                ressources: irq:49 mémoire:e1000000-e1001fff
+        *-isa
+             description: ISA bridge
+             produit: Wildcat Point-LP LPC Controller
+             fabriquant: Intel Corporation
+             identifiant matériel: 1f
+             information bus: pci@0000:00:1f.0
+             version: 03
+             bits: 32 bits
+             horloge: 33MHz
+             fonctionnalités: isa bus_master cap_list
+             configuration: driver=lpc_ich latency=0
+             ressources: irq:0
+        *-sata
+             description: SATA controller
+             produit: Wildcat Point-LP SATA Controller [AHCI Mode]
+             fabriquant: Intel Corporation
+             identifiant matériel: 1f.2
+             information bus: pci@0000:00:1f.2
+             nom logique: scsi0
+             version: 03
+             bits: 32 bits
+             horloge: 66MHz
+             fonctionnalités: sata msi pm ahci_1.0 bus_master cap_list emulated
+             configuration: driver=ahci latency=0
+             ressources: irq:42 portE/S:1860(taille=8) portE/S:1870(taille=4) portE/S:1868(taille=8) portE/S:1874(taille=4) portE/S:1840(taille=32) mémoire:e1110000-e1117fff
+           *-disk
+                description: ATA Disk
+                produit: TS120GMTS420S
+                identifiant matériel: 0.0.0
+                information bus: scsi@0:0.0.0
+                nom logique: /dev/sda
+                version: 9A0
+                numéro de série: F245440135
+                taille: 111GiB (120GB)
+                fonctionnalités: partitioned partitioned:dos
+                configuration: ansiversion=5 logicalsectorsize=512 sectorsize=512 signature=a67b661b
+              *-volume:0
+                   description: EXT4 volume
+                   fabriquant: Linux
+                   identifiant matériel: 1
+                   information bus: scsi@0:0.0.0,1
+                   nom logique: /dev/sda1
+                   nom logique: /
+                   version: 1.0
+                   numéro de série: 09842abc-6454-4733-8e3f-1db05d4c809d
+                   taille: 110GiB
+                   capacité: 110GiB
+                   fonctionnalités: primary bootable journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
+                   configuration: created=2022-03-09 21:41:09 filesystem=ext4 lastmountpoint=/ modified=2022-03-19 16:46:32 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro mounted=2022-03-19 15:58:38 state=mounted
+              *-volume:1
+                   description: Extended partition
+                   identifiant matériel: 2
+                   information bus: scsi@0:0.0.0,2
+                   nom logique: /dev/sda2
+                   taille: 975MiB
+                   capacité: 975MiB
+                   fonctionnalités: primary extended partitioned partitioned:extended
+                 *-logicalvolume
+                      description: Linux swap volume
+                      identifiant matériel: 5
+                      nom logique: /dev/sda5
+                      version: 1
+                      numéro de série: 8a025c33-3bc5-4def-89e2-3cf1788a5ca1
+                      taille: 975MiB
+                      capacité: 975MiB
+                      fonctionnalités: nofs swap initialized
+                      configuration: filesystem=swap pagesize=4096
+        *-generic
+             description: Signal processing controller
+             produit: Wildcat Point-LP Thermal Management Controller
+             fabriquant: Intel Corporation
+             identifiant matériel: 1f.6
+             information bus: pci@0000:00:1f.6
+             version: 03
+             bits: 64 bits
+             horloge: 33MHz
+             fonctionnalités: pm msi cap_list
+             configuration: driver=intel_pch_thermal latency=0
+             ressources: irq:17 mémoire:e1126000-e1126fff
+     *-pnp00:00
+          produit: PnP device PNP0c02
+          identifiant matériel: 4
+          fonctionnalités: pnp
+          configuration: driver=system
+     *-pnp00:01
+          produit: PnP device PNP0103
+          identifiant matériel: 5
+          fonctionnalités: pnp
+          configuration: driver=system
+     *-pnp00:02
+          produit: PnP device PNP0c02
+          identifiant matériel: 6
+          fonctionnalités: pnp
+          configuration: driver=system
+     *-pnp00:03
+          produit: PnP device PNP0b00
+          identifiant matériel: 7
+          fonctionnalités: pnp
+          configuration: driver=rtc_cmos
+     *-pnp00:04
+          produit: PnP device IFX0102
+          identifiant matériel: 8
+          fonctionnalités: pnp
+          configuration: driver=tpm_tis
+     *-pnp00:05
+          produit: PnP device PNP0c02
+          identifiant matériel: 9
+          fonctionnalités: pnp
+          configuration: driver=system
+     *-pnp00:06
+          produit: PnP device PNP0c02
+          identifiant matériel: a
+          fonctionnalités: pnp
+          configuration: driver=system
+     *-pnp00:07
+          produit: PnP device PNP0501
+          identifiant matériel: b
+          fonctionnalités: pnp
+          configuration: driver=serial
+     *-pnp00:08
+          produit: PnP device PNP0303
+          identifiant matériel: c
+          fonctionnalités: pnp
+          configuration: driver=i8042 kbd
+     *-pnp00:09
+          produit: PnP device PNP0c02
+          identifiant matériel: d
+          fonctionnalités: pnp
+          configuration: driver=system
