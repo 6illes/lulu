@@ -1,5 +1,5 @@
 # Debian for Lulu
-Dell Chromebook 13 7310 Lulu backlight
+Dell Chromebook 13 7310 Lulu
 
 Copy xblight files to /usr/local/bin
 
